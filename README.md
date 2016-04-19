@@ -1,2 +1,2 @@
 # mydialog
-基于jquery的dialog
+depend on jQuery/Zepto
