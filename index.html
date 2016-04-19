@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/dialog.css" />
+        <script src="js/jquery.js" charset="utf-8"></script>
+        <script src="js/dialog.js" charset="utf-8"></script>
+    </head>
+    <body>
+       <script>
+
+        (function (doc, win) {
+
+          var docEl = doc.documentElement,
+
+              PSDwidth = 750,
+
+              resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+
+              recalc = function () {
+                  var clientWidth = docEl.clientWidth;
+
+                  console.log(clientWidth);
+
+                  docEl.style.fontSize = 30 * (clientWidth / PSDwidth) + 'px';
+
+                  console.log(clientWidth / PSDwidth);
+              };
+
+
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+
+        })(document, window);
+
+    </script>
+       <script>
+            dialog({
+                'customClass': 'dialog-1', //自定义class
+                'content':'弹窗内容',
+                'title':'弹窗标题',
+                'outerClose': true, //是否允许点击外部遮罩层关闭
+                'showCover': true, //是否使用遮罩层
+                'ok':function(){
+                    alert('ok');
+                },
+                'cancel':function(){
+                    alert('cancel')
+                    ;}
+                })
+            .show();
+       </script>
+    </body>
+</html>

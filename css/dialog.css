@@ -1,0 +1,130 @@
+/*
+* @Author: tengfeisu
+* @Date:   2016-04-19 10:40:08
+* @Last Modified by:   tengfeisu
+* @Last Modified time: 2016-04-19 14:37:22
+*/
+html, body {
+    margin:0;
+    padding:0;
+    font-size: 20px;
+}
+.ui-dialog {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(0, -50%, 0) !important;
+  transform: translate3d(0, -50%, 0) !important;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #DDDEDF;
+  width: 20rem;
+  margin-left: -10rem;
+  max-width: 20rem;
+  background: #FFF;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #3A3A3A;
+  -webkit-box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.1);
+}
+.ui-dialog .ui-dialog-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-bottom: 1px solid #DDDEDF;
+}
+.ui-dialog .ui-dialog-title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-indent: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: .8rem;
+  font-weight: bold;
+}
+.ui-dialog .ui-dialog-close {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  color: #DDDEDF;
+  background: #FFF;
+  border: none;
+  font-size: 1.2rem;
+}
+.ui-dialog .ui-dialog-close:hover,
+.ui-dialog .ui-dialog-close:active {
+  color: #a8abae;
+  outline: none;
+}
+.ui-dialog .ui-dialog-body {
+  text-align: left;
+  min-height: 5rem;
+}
+.ui-dialog .ui-dialog-content {
+  display: inline-block;
+  min-height: 2em;
+  padding: .75rem 1rem;
+  word-wrap: break-word;
+  font-size: .8rem;
+}
+.ui-dialog .ui-dialog-footer {
+  height: 2rem;
+  margin-bottom: .2rem;
+  text-align: center;
+}
+.ui-dialog .ui-dialog-footer button {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .5rem 1rem ;
+  line-height: 1;
+  background-color: #F06060;
+  font-size: .8rem;
+  border: none;
+  color: #FFF;
+}
+.ui-dialog .ui-dialog-footer button:hover,
+.ui-dialog .ui-dialog-footer button:active {
+  background: #F38080;
+  outline: none;
+}
+.ui-dialog .ui-dialog-footer button.ui-btn-disabled {
+  border: 1px solid #DDDEDF;
+  background: #F8F9FC;
+  color: #ABABAD;
+}
+.ui-dialog .ui-dialog-footer button.ui-btn-disabled:hover,
+.ui-dialog .ui-dialog-footer button.ui-btn-disabled:active {
+  border: 1px solid #DDDEDF;
+  background: #F8F9FC;
+  color: #ABABAD;
+}
+.ui-dialog .ui-dialog-footer button + button {
+  margin-left: 10px;
+  color: #000000;
+  background: #FFFFFF;
+  border: 1px solid #DDDEDF;
+}
+.ui-dialog .ui-dialog-footer button + button:hover,
+.ui-dialog .ui-dialog-footer button + button:active {
+  border-color: #F06060;
+  color: #F06060;
+  background: none;
+}
+.ui-dialog-mask {
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
